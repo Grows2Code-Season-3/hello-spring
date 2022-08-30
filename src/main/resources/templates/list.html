@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Some Cheeses</title>
+</head>
+<body>
+    <h1>Some Cheeses</h1>
+
+    <p th:if="${cheeses.size()}">No cheeses</p>
+
+    <ul th:unless="${cheeses.size() == 0}">
+        <li th:each="cheese : ${cheeses}" th:text="${cheese}"></li>
+
+<!--        <th:block th:each="cheese : ${cheeses}">-->
+<!--            <li th:text="${cheese}"></li>-->
+<!--        </th:block>-->
+
+    </ul>
+
+</body>
+</html>
